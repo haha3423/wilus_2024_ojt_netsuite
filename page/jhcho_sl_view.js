@@ -54,23 +54,18 @@ define([
         processStatusFld.addSelectOption({ value: 'P', text: '생성대기' });
         processStatusFld.addSelectOption({ value: 'Y', text: '생성완료' });
 
-        let dateToFld = form.addField({
-            id: 'custpage_ko_hometax_field_date_to',
-            type: ui.FieldType.DATE,
+        let nameFld = form.addField({
+            id: 'form_name',
+            type: ui.FieldType.TEXT,
             container: 'fldgrp1_id',
-            label: '일자 To'
+            label: '이름'
         });
         
         // set field value
         // const params = model.params;
         // if (params.dateOption) {
         //     dateOptionFld.defaultValue = params.dateOption
-        // } else {
-        //     dateOptionFld.defaultValue = 'write_date'
         // }
-        // if (params.dateFrom) dateFromFld.defaultValue = params.dateFrom;
-        // if (params.dateTo) dateToFld.defaultValue = params.dateTo;
-        // if (params.procSts) processStatusFld.defaultValue = params.procSts;
 
     }
 
@@ -78,8 +73,6 @@ define([
         const params = model.params;
         let acctList = model.acctList;
         // let itemList = model.itemList;
-
-
 
         const mainTab = form.addSubtab({
             id: 'custpage_main_tab',
