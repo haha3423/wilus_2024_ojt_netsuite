@@ -48,11 +48,9 @@ define([
             id: 'custpage_ko_hometax_field_proc_sts',
             type: ui.FieldType.SELECT,
             container: 'fldgrp1_id',
-            label: '처리상태'
-        });
-        processStatusFld.addSelectOption({ value: 'N', text: '미생성' });
-        processStatusFld.addSelectOption({ value: 'P', text: '생성대기' });
-        processStatusFld.addSelectOption({ value: 'Y', text: '생성완료' });
+            label: '고객',
+            source: 'customer'
+        })
 
         let nameFld = form.addField({
             id: 'form_name',
